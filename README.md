@@ -1,7 +1,7 @@
-## rename_files is the CLI utility that renames files in a directory by adding '-' and an alpha-numeric random 8-character string. 
+## rename_files is a CLI utility that renames files in a directory by adding '-' and an alpha-numeric random 8-character string. 
 
 ## How to use rename_files utility
-Let the directory that contains some files (file_1.txt file_2.txt) that need automatic renaming is "~/files". Pass the "~/files" argument to the program, for example: 
+Let the directory with some files (file_1.txt file_2.txt) that need automatic renaming is "~/files". Pass the "~/files" argument to the program, for example: 
    ```console
       pwd 
       ~/
@@ -15,4 +15,5 @@ Let the directory that contains some files (file_1.txt file_2.txt) that need aut
       ls
       file_1-sqdexnmh.txt file_2-1hje1zvz.txt
    ```
+As a result, files file_1.txt and file_2.txt were renamed to file_1-sqdexnmh.txt and file_2-1hje1zvz.txt. 
 

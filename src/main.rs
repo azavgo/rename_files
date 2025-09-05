@@ -38,8 +38,8 @@ pub fn rename_files(target_dir: &str) -> Result<(), RenameFilesError> {
         let path = entry.path();
 
         if path.is_file() {
-            if let Some(extension) = path.extension() 
-                && let Some(file_stem) = path.file_stem() {
+            if let Some(file_stem) = path.file_stem() 
+                && let Some(extension) = path.extension() {
                 let new_name = format!("{}{}.{}", file_stem.to_string_lossy(), random_string(8), extension.to_string_lossy());
                 let new_path = Path::new(target_dir).join(new_name);
 
