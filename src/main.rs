@@ -1,8 +1,7 @@
-use std::env::{args};
-use rand::prelude::*;  
-
+use std::env::args;  
 use std::fs;
 use std::path::Path;
+use rand::Rng;
 
 #[derive(Debug)]
 pub enum RenameFilesError { 
@@ -55,7 +54,7 @@ pub fn rename_files(target_dir: &str) -> Result<(), RenameFilesError> {
 fn main() -> Result<(), RenameFilesError> {
     match args().nth(1) {
         Some(target_dir) => rename_files(target_dir.as_str())?,
-        None => println!("No argument passed"), 
+        None => println!("The directory has not been specified. Type ./rename_files path_to_dir"), 
     }
     Ok(())
 }
